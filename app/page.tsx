@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center text-center font-serif">
-      {/* Elegant Header */}
       <header className="fixed top-0 w-full bg-white shadow-lg py-5 px-8 flex justify-center space-x-8 text-lg font-semibold tracking-wide z-50">
         <button
           className="px-6 py-3 text-black"
@@ -37,7 +36,6 @@ export default function Home() {
       </header>
 
       <div className="w-full">
-        {/* Our Love Story Section */}
         <section
           ref={aboutRef}
           className="h-screen flex items-center justify-center bg-gradient-to-r from-rose-100 to-pink-200 text-gray-800"
@@ -55,7 +53,6 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Wedding Details Section */}
         <section
           ref={detailsRef}
           className="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-100 to-blue-200 text-gray-800"
@@ -73,7 +70,6 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* RSVP Section */}
         <section
           ref={rsvpRef}
           className="h-screen flex items-center justify-center bg-gradient-to-r from-emerald-100 to-green-200 text-gray-800"
