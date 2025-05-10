@@ -4,17 +4,22 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function RSVP() {
-	const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     inviteCode: "",
     name: "",
     email: "",
     phone: "",
     message: "",
+    plusOne: false,
+    plusOneName: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, type, checked } = e.target as HTMLInputElement;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,7 +27,15 @@ export default function RSVP() {
     console.log("RSVP Submitted:", formData);
     // Add logic to send form data to a server or email
     alert("Thank you for your RSVP!");
-    setFormData({ inviteCode: "", name: "", email: "", phone: "", message: "" });
+    setFormData({
+      inviteCode: "",
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      plusOne: false,
+      plusOneName: "",
+    });
   };
 
   return (
@@ -61,7 +74,6 @@ export default function RSVP() {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
-              disabled
             />
           </div>
           <div>
@@ -92,6 +104,39 @@ export default function RSVP() {
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
+          {formData.inviteCode === "1" && (
+            <div>
+              <div className="flex items-center space-x-2">
+                <label htmlFor="plusOne" className="text-left font-medium">
+                  Add a Plus One?
+                </label>
+                <input
+                  type="checkbox"
+                  id="plusOne"
+                  name="plusOne"
+                  checked={formData.plusOne}
+                  onChange={handleChange}
+                  className="h-5 w-5"
+                />
+              </div>
+              {formData.plusOne && (
+                <div className="mt-4">
+                  <label htmlFor="plusOneName" className="block text-left font-medium mb-1">
+                    Plus One's Name
+                  </label>
+                  <input
+                    type="text"
+                    id="plusOneName"
+                    name="plusOneName"
+                    value={formData.plusOneName}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  />
+                </div>
+              )}
+            </div>
+          )}
           <div>
             <label htmlFor="message" className="block text-left font-medium mb-1">
               Message (Optional)
