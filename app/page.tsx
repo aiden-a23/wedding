@@ -1,12 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import RSVP from "./rsvp";
+import Photos from "./photos";
+import WeddingDetails from "./weddingDetails";
+import Registry from "./registry";
 
 export default function Home() {
-  const aboutRef = useRef(null);
+  const photosRef = useRef(null);
   const detailsRef = useRef(null);
   const rsvpRef = useRef(null);
+  const registryRef = useRef(null);
 
   const scrollToSection = (ref: any) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -17,15 +21,15 @@ export default function Home() {
       <header className="fixed top-0 w-full bg-white shadow-lg py-5 px-8 flex justify-center space-x-8 text-lg font-semibold tracking-wide z-50">
         <button
           className="px-6 py-3 text-black"
-          onClick={() => scrollToSection(aboutRef)}
-        >
-          Our Story
-        </button>
-        <button
-          className="px-6 py-3 text-black"
           onClick={() => scrollToSection(detailsRef)}
         >
           Wedding Details
+        </button>
+        <button
+          className="px-6 py-3 text-black"
+          onClick={() => scrollToSection(photosRef)}
+        >
+          Photos
         </button>
         <button
           className="px-6 py-3 text-black"
@@ -33,59 +37,28 @@ export default function Home() {
         >
           RSVP
         </button>
+        <button
+          className="px-6 py-3 text-black"
+          onClick={() => scrollToSection(registryRef)}
+        >
+          Registry
+        </button>
+
       </header>
 
       <div className="w-full">
-        <section
-          ref={aboutRef}
-          className="h-screen flex items-center justify-center bg-gradient-to-r from-rose-100 to-pink-200 text-gray-800"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
-            <h1 className="text-6xl font-bold mb-4">Our Love Story</h1>
-            <p className="text-lg max-w-2xl mx-auto">
-              From our first date to this special moment, our journey has been full of love, laughter, and unforgettable memories.
-            </p>
-          </motion.div>
-        </section>
-
-        <section
-          ref={detailsRef}
-          className="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-100 to-blue-200 text-gray-800"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
-            <h1 className="text-6xl font-bold mb-4">Wedding Details</h1>
-            <p className="text-lg max-w-2xl mx-auto">
-              Join us on our special day! The ceremony will be held at [Venue Name] on [Date & Time].
-            </p>
-          </motion.div>
-        </section>
-
-        <section
-          ref={rsvpRef}
-          className="h-screen flex items-center justify-center bg-gradient-to-r from-emerald-100 to-green-200 text-gray-800"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
-            <h1 className="text-6xl font-bold mb-4">RSVP</h1>
-            <p className="text-lg max-w-2xl mx-auto">
-              We would love for you to celebrate with us! Let us know if you can make it.
-            </p>
-          </motion.div>
-        </section>
+        <div ref={detailsRef}>
+          <WeddingDetails />
+        </div>
+        <div ref={photosRef}>
+          <Photos />
+        </div>
+        <div ref={rsvpRef}>
+          <RSVP />
+        </div>
+        <div ref={registryRef}>
+          <Registry />
+        </div>
       </div>
     </div>
   );
