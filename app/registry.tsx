@@ -13,9 +13,11 @@ export default function Registry() {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <h1 className="text-6xl font-bold mb-4">Buy us shit!!!</h1>
+        <h1 className="text-6xl font-bold mb-4">Registry</h1>
         <p className="text-lg max-w-2xl mx-auto">
-          Thanks
+          We are very greatful for everyone's love and support.
+          Gifts are not required or expected, but if you feel inclined to give a gift,
+          we have registered at a few convenient vendors.
         </p>
       </motion.div>
     </section>
