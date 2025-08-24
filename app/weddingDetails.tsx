@@ -5,49 +5,50 @@ import { motion } from "framer-motion";
 export default function WeddingDetails() {
   return (
     <section
-      className="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-100 to-blue-200 text-gray-800"
+      className="min-h-[90vh] flex items-center justify-center text-[#333333] py-16"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center"
+        className="text-center max-w-3xl mx-auto px-4"
       >
-        <h1 className="text-6xl font-bold mb-6">The Deets</h1>
-        <div className="space-y-4 text-left">
+        <h1 className="text-5xl md:text-6xl font-light mb-2 text-[#800020]">Wedding Details</h1>
+        <div className="w-24 h-[1px] bg-[#800020] mx-auto my-6"></div>
+        <div className="space-y-8 text-left">
           <div>
-            <h2 className="text-2xl font-semibold">Ceremony</h2>
-            <p className="text-lg">
-              {/* <strong>Location:</strong> The Toledo Zoo, <a href="https://maps.google.com/maps?hl=en&gl=us&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x883b879d23f91ab7%3A0xb405e59b5b69bc67&ved=0CBMQ4kBqFwoTCIDQoKflmY0DFQAAAAAdAAAAABAF">2 Hippo Way, Toledo, OH 43609</a> */}
-              <strong>Location:</strong> The Formal Gardens
+            <h2 className="text-2xl md:text-3xl font-medium text-[#800020] mb-2">Ceremony</h2>
+            <p className="text-lg md:text-xl">
+              <span className="font-medium text-[#800020]">Location:</span> The Formal Gardens
             </p>
             {/* <p className="text-lg">
               <strong>Date:</strong> August 29th, 2026
             </p> */}
-            <p className="text-lg">
-              <strong>Time:</strong> 5:30 - 6:00 PM
+            <p className="text-lg md:text-xl">
+              <span className="font-medium text-[#800020]">Time:</span> 5:30 - 6:00 PM
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold">Reception</h2>
-            <p className="text-lg">
-              <strong>Location:</strong> The Great Hall
+            <h2 className="text-2xl md:text-3xl font-medium text-[#800020] mb-2">Reception</h2>
+            <p className="text-lg md:text-xl">
+              <span className="font-medium text-[#800020]">Location:</span> The Great Hall
             </p>
-            <p className="text-lg">
-              <strong>Time:</strong> 6:00 PM - 11:00 PM
+            <p className="text-lg md:text-xl">
+              <span className="font-medium text-[#800020]">Time:</span> 6:00 PM - 11:00 PM
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold">Dress Code</h2>
-            <p className="text-lg">Formal Wear</p>
+            <h2 className="text-2xl md:text-3xl font-medium text-[#800020] mb-2">Dress Code</h2>
+            <p className="text-lg md:text-xl">Formal Wear</p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold">Additional Information</h2>
-            <p className="text-lg">
-              - Parking is available at the Broadway Lot - Please do not park at the main entrance <br />
-              - Please RSVP by June 1st, 2026. <br />
-              - Contact us if you have any questions!!!
-            </p>
+            <h2 className="text-2xl md:text-3xl font-medium text-[#800020] mb-2">Additional Information</h2>
+            <ul className="text-lg md:text-xl space-y-2">
+              <li>• Parking is available at the Broadway Lot</li>
+              <li>• Please do not park at the main entrance</li> 
+              <li>• Please RSVP by June 1st, 2026</li>
+              <li>• Contact us if you have any questions</li>
+            </ul>
           </div>
         </div>
       </motion.div>
