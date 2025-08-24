@@ -6,16 +6,16 @@ export default function Registry() {
   const registryLinks = [
     {
       name: "Amazon",
-      image: "/file.svg", // You can replace with actual Amazon logo
-      url: "https://www.amazon.com/wedding/registry",
+      image: "/amazon.png", // You can replace with actual Amazon logo
+      url: "https://www.amazon.com/wedding/registry/31SYE576TYEAU",
     },
     {
-      name: "Target",
+      name: "Target (Example)",
       image: "/globe.svg", // You can replace with actual Target logo
       url: "https://www.target.com/gift-registry/",
     },
     {
-      name: "Crate & Barrel",
+      name: "Crate & Barrel (Example)",
       image: "/window.svg", // You can replace with actual Crate & Barrel logo
       url: "https://www.crateandbarrel.com/gift-registry/",
     },

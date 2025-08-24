@@ -14,7 +14,10 @@ export default function WeddingDetails() {
         className="text-center max-w-3xl mx-auto px-4"
       >
         <h1 className="text-5xl md:text-6xl font-light mb-2 text-[#800020]">Wedding Details</h1>
-        <div className="w-24 h-[1px] bg-[#800020] mx-auto my-6"></div>
+        <a href="https://calendar.app.google/QR3ugLcfNNPKj7b87" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl text-[#800020] hover:underline">
+          August 29th, 2026
+        </a>
+        <div className="w-24 h-[1px] bg-[#800020] mx-auto my-4"></div>
         <div className="space-y-8 text-left">
           <div>
             <h2 className="text-2xl md:text-3xl font-medium text-[#800020] mb-2">Ceremony</h2>
