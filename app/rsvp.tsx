@@ -49,8 +49,9 @@ export default function RSVP() {
         <h1 className="text-5xl md:text-6xl font-light mb-2 text-[#800020]">RSVP</h1>
         <div className="w-24 h-[1px] bg-[#800020] mx-auto my-6"></div>
         <p className="text-lg md:text-xl mb-8">We look forward to celebrating with you!<br /><a href="https://calendar.app.google/QR3ugLcfNNPKj7b87" className="text-[#800020] hover:underline">Add to Calendar</a></p>
+        <p className="text-3xl md:text-4xl mb-8">Please come back after Invitations are sent out!</p>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border border-[#800020]/10">
+        {/* <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border border-[#800020]/10">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label htmlFor="inviteCode" className="block text-left font-medium mb-1 text-[#800020]">
@@ -167,7 +168,7 @@ export default function RSVP() {
               Submit RSVP
             </button>
           </form>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );
