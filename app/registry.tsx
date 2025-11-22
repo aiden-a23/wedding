@@ -10,14 +10,14 @@ export default function Registry() {
       url: "https://www.amazon.com/wedding/registry/31SYE576TYEAU",
     },
     {
-      name: "Target (Example)",
-      image: "/globe.svg", // You can replace with actual Target logo
-      url: "https://www.target.com/gift-registry/",
+      name: "Target",
+      image: "/target.png", // You can replace with actual Target logo
+      url: "https://www.target.com/gift-registry/gift/fiona-and-aiden",
     },
     {
-      name: "Crate & Barrel (Example)",
-      image: "/window.svg", // You can replace with actual Crate & Barrel logo
-      url: "https://www.crateandbarrel.com/gift-registry/",
+      name: "Ikea",
+      image: "/ikea_logo.png", // You can replace with actual Ikea logo
+      url: "https://www.ikea.com/us/en/gift-registry/guest/?id=67de0144-0392-428a-b664-d0b15ed236d2",
     },
   ];
 
@@ -45,19 +45,26 @@ export default function Registry() {
               href={registry.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg border border-[#800020]/10 transition-all duration-300 hover:scale-105"
+              className="flex flex-col items-center p-8 bg-white rounded-lg shadow-md hover:shadow-lg border border-[#800020]/10 transition-all duration-300 hover:scale-105"
               whileHover={{ y: -5 }}
             >
-              <div className="w-16 h-16 mb-4">
-                <img
+              {/* <div className="w-16 h-16 mb-4"> */}
+                {/* <img
                   src={registry.image}
                   alt={registry.name}
                   className="w-full h-full object-contain"
+                /> */}
+              {/* </div> */}
+              <div className="w-28 h-28 mb-4">
+                <img
+                  src={registry.image}
+                  alt={registry.name}
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <h3 className="text-xl font-medium text-[#800020]">
+              {/* <h3 className="text-xl font-medium text-[#800020]">
                 {registry.name}
-              </h3>
+              </h3> */}
             </motion.a>
           ))}
         </div>
