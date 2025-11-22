@@ -16,7 +16,7 @@ export default function Registry() {
     },
     {
       name: "Ikea",
-      image: "/ikea_logo.png", // You can replace with actual Ikea logo
+      image: "/Ikea_logo.png", // You can replace with actual Ikea logo
       url: "https://www.ikea.com/us/en/gift-registry/guest/?id=67de0144-0392-428a-b664-d0b15ed236d2",
     },
   ];
